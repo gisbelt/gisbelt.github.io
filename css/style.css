@@ -113,7 +113,7 @@ a{
 /*elementos hijo*/
 .slider-info .informacion article .slide{
 	background: #fff;
-	width: 77.1%;
+	width: 100%;
 	left: 100%; /*Posionamos a la derecha*/
 	padding: 20px 80px;	
 	/*Al poner absolute ya no hay espacio que podamos marcar y elemina el alto*/
