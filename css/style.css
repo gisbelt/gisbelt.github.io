@@ -1,0 +1,237 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sixing: border-box;
+	/* -moz-box-sizing: border-box; */
+	-box-sizing: border-box; 	
+}
+
+body{
+	/*Los puntos significan que hay la carpeta img está atrás o cuando sales de styles.css*/
+	background: url('../img/fondo3.jpg');
+	background-size: cover; /*Abarca el 100% del ancho*/
+	background-attachment: fixed; /*para que el fondo no se mueva*/
+	font-family: 'Open Sans', Sans-serif, Arial;
+}
+
+a{
+	text-decoration: none;
+}
+
+.contenedor{
+	width: 90%;
+	max-width: 700px;
+	margin: auto;
+	height: 100%;
+	display: flex; /*Esto porque queremos usar Flexbob*/
+	align-items: center;
+	/*Vamos a centrarlo verticalmente con Jquery*/
+}
+
+.target{
+	background: #fff;
+	margin: 40px 0px; /*Margen arriba y abajo de 40*/
+	border-radius: 5px;
+	overflow: hidden; /*Todo el contenido que esté afuera de la tarjeta, eliminalo, para poder poner cosas a la derecha o izquierda*/
+	z-index: 1000;
+	width: 100%;
+}
+
+/* ----------------------------- */
+/* ------- SLIDER BANNER ------- */
+/* ----------------------------- */
+
+.slider-banner {
+	overflow: hidden;
+	z-index: 1000; 
+	position: relative; /*Nos permite decirle a los elementos hijos (a cada imagen) que se pongan a la derecha*/
+}
+/*Banner*/
+.slider-banner .banner{
+	position: relative;
+	width: 100%;
+}
+/*elementos hijo*/
+.slider-banner .banner img{
+	vertical-align: top; /*Eliminamos el espaciado que agrega a las imagenes en el top*/
+	width: 100%;
+	height: 300px;
+	/*Podemos posicionar cada imagen como nosotros queramos (se pondrán una encima de la otra para que se pueda desplazar, 
+	 y esa posicion absoluta no respetará el espacio, es decir es como si se borrará dónde anteriormente estaban las imagenes)*/
+	position: absolute; 
+	top: 0; 
+	left: 100%; /*Empuja de izquierda a derecha 100% (todas las imagnes a la derecha)*/
+	/*Las imagenes van a desaparecer, en Jquery se hará lo demás, calularemos el height en base a las imagenes*/
+}
+
+.slider-banner .flecha-banner{
+	font-size: 35px;
+	line-height: 35px;
+	color: rgba(0,0,0,.2); /*Color rgba negro con transparencia de .2*/
+	/*El slider-banner tiene un posicion relativa, entonces como el elemento hijo (flecha-banner) 
+	tiene una posicion absoluta vamos poder decir, la flecha ponme una a la izquieda y otra a la derecha*/
+	position: absolute; 
+	top: 40%;
+	z-index: 1100; /*Como en mayor que 1000 las flechas van a aparecer en frente y arriba*/
+}
+
+.slider-banner .flecha-banner:hover{
+	color: rgba(0,0,0,.5);
+}
+
+.slider-banner .anterior{
+	left: 20px; /*para posicionarla a la izquierda*/
+}
+
+.slider-banner .siguiente{
+	right: 20px; /*para posicionarla a la derecha*/
+}
+
+
+/* ----------------------------- */
+/* ------- SLIDER INFO --------- */
+/* ----------------------------- */
+
+.slider-info{
+	text-align: center;
+	/*Dentro de los limites muestralo, afuera borralo, esto para mis propios elementos*/
+	overflow: hidden; /*Toda la info que esté afuera desaparezca*/
+	padding: 20px 0px;
+	z-index: 1000;
+	position: relative; /*Para posicionar las flechas*/
+}
+/*Informacion*/
+.slider-info .informacion{
+	width: 100%;	
+}
+
+.slider-info .informacion article{
+	width: 100%;
+	overflow: hidden;
+	position: relative;	
+}
+/*elementos hijo*/
+.slider-info .informacion article .slide{
+	background: #fff;
+	width: 77.1%;
+	left: 100%; /*Posionamos a la derecha*/
+	padding: 20px 80px;	
+	/*Al poner absolute ya no hay espacio que podamos marcar y elemina el alto*/
+	/*Con jquery lo solucionamos*/
+	position: absolute; 
+}
+
+.slider-info .flecha-info {
+	font-size: 20px;
+	line-height: 35px;
+	color: #e6e6e6;
+	position: absolute; /*PAra poder posicionarlas como nosotros queramos*/
+	top: 45%; /*Como la podemos posicionar como queramos, dame un top de 50%*/
+	z-index: 1000;
+}
+
+.slider-info .flecha-info:hover {
+	color: #7CD5F4;
+}
+
+.slider-info .anterior{
+	left: 20px;
+}
+.slider-info .siguiente{
+	right: 20px;
+}
+/*Estilos para los slide de info*/
+.slider-info .informacion .nombre{
+	text-align: center;
+	color: #444;
+	font-size: 38px;
+	line-height: 38px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+.slider-info .informacion .trabajo{
+	text-align: center;
+	color: #55acee;
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+.slider-info .informacion .pais{
+	text-align: center;
+	color: #8d8d8d;
+	font-size: 14px;
+	line-height: 14px;
+}
+.slider-info .informacion .pais img{
+	position: relative; /*Queremos empujar la imagen dos pixeles abajo*/
+	top: 2px;
+	margin-right: 10px;
+}
+
+.slider-info .informacion .texto{
+	color: #55acce;
+	font-size: 18px;
+	line-height: 24px;
+}
+.slider-info .informacion .subtitulo{
+	color: #444;
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 16px;
+}
+
+/*Botones slider info*/
+.slider-info .botones{
+	width: 100%;
+}
+.slider-info .botones span{
+	width: 14px;
+	height: 14px;
+	display: inline-block; /*Para modificar el alto y el ancho*/
+	margin-right: 10 0px;
+	border-radius: 50%;
+	background: #e6e6e6;
+}
+.slider-info .botones span.active{
+	background: #7CD5F4; /*El botón que tenga la clase active*/
+}
+
+/*Redes Sociales*/
+.social-links{
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+}
+.social-links a{
+	display: inline-block; 
+	width: 50px;
+	height: 50px;
+	line-height: 20px;
+	color: #fff;
+	/*background: #7CD5F4;*/
+	border-radius: 50%;
+	margin: 0 10px;
+}
+.social-links a:hover{
+	background:#55acce; /*Facebook*/
+}
+.social-links .whatsapp:hover{
+	background:#6fe79b; /*whatsapp*/
+}
+.social-links a span{
+	position: relative;
+	top: 15px;
+}
+.social-links .facebook{ background: #0e76a8; text-decoration: none;}
+.social-links .whatsapp{ background: #25d366}
+.social-links .telegram{ background: #0088CC }
+.social-links .instagram{
+ 	background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.social-links .instagram:hover{
+ 	background: #f09433; 
+}

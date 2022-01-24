@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Gisbel Torres</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, 
+	initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<!-- GOOGLE FONTS-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css' />
+	<!-- FONTS de https://icomoon.io/app/#/select-->
+	<link rel="stylesheet" href="fonts/style.css">
+	<link rel="stylesheet" href="fonts/bootstrap-icons.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="contenedor">
+		<section class="target">
+			<!-- BANNER -->
+			<section class="slider-banner">
+				<div class="banner" id="banner">
+					<img class="slide active" src="img/contactame.jpg">
+					<img class="slide" src="img/target5.png">
+					<img class="slide" src="img/target6.jpg">
+				</div>
+
+				<a href="" id="banner-prev" class="flecha-banner anterior"><span class="icon-chevron-thin-left"></span></a>
+				<a href="" id="banner-next" class="flecha-banner siguiente"><span class="icon-chevron-thin-right"></span></a>
+			</section>
+			<!-- BANNER -->
+			<!-- INFO -->
+			<section class="slider-info">
+				<a href="#" id="info-prev" class="flecha-info anterior"><span class="icon-chevron-thin-left"></span></a>
+				<a href="#" id="info-next" class="flecha-info siguiente"><span class="icon-chevron-thin-right"></span></a>
+
+				<section id="informacion" class="informacion">
+					<!-- Contendrá todos nuestros textos -->
+					<article id="info">
+						<div class="slide active">
+							<h1 class="nombre">Gisbel Torres</h1>
+							<p class="trabajo">Diseñadora Web</p>
+							<p class="pais"><img src="img/bandera.png">Venezuela</p>
+							<a href="http://gisbeltorres.online" class="btn btn-success text-light rounded" target="_blank" title="Web Page Gisbel Torres"><i class="bi bi-link"></i> Visita mi Página Web</a>
+						</div>
+
+						<div class="slide">
+							<h2 class="subtitulo">Apasionada por le mundo del desarrollo</h2>
+							<p class="texto">Me gradué como especialista en informática e inicié en el mundo del diseño web 
+								como autodidacta, me considero una buena maquetadora y creativa, con la habilidad de 
+								maquetar sin un diseño plasmado. Actualmente me estoy formando en el mundo de VueJS y 
+								Diseño con Figma
+							</p>
+						</div>
+
+						<div class="slide">
+							<h2 class="subtitulo">También me desempeño en el mundo del Soporte Técnico Informático</h2>
+							<p class="texto">
+								Especializados en el diagnóstico de fallas y errores a nivel de hardware y software.
+								Experiencia avanzada con los Sistemas Operativos Windows y Ubuntu.
+								Mantenimiento preventivo y correctivo de los equipos, asesoramiento técnico y más.
+							</p>
+						</div>
+					</article>
+					<!-- Los botones los vamos a agregar con Jquery y con css los estilos, porque queremos que haya un botón por cada slide del article info. Será automatizado, para que con Jquery sepamos cuantos botones tendremos y por casa slide se irá agragando un puntito-->
+					<div class="botones" id="botones"></div>
+				</section>
+
+			</section>
+			<!-- INFO -->
+
+			<section class="social-links">
+				<a href="https://www.linkedin.com/in/gisbeltorres/" class="facebook" title="Ingresa a mi LinkedIn" target="_blank"><span class="icon-linkedin"></span></a>
+				<a href="https://wa.me/584245289570/?text=Escríbeme%20Por%20Whatsapp" class="whatsapp" title="Escríbeme por whatsapp" target="_blank"><span class="bi bi-whatsapp"></span></a>
+				<a href="https://t.me/GisbelT" class="telegram" title="Escríbeme por Telegram"><span class="bi bi-telegram" target="_blank"></span></a>
+			</section>
+		</section>
+
+	</div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
