@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-webkit-box-sizing: border-box;
+	-moz-webkit-box-sizing: border-box;
+	-ms-webkit-box-sizing: border-box;
+	-o-webkit-box-sizing: border-box;
+	webkit-box-sizing: border-box;
+}
+body{
+	background: url(../img/fondo.png) #000; /*Si no carga la imagen, pon el fondo de color negro*/
+	background-size: cover; /*Para que la imagen se ajuste al ancho de la pantalla del usuario*/
+	color: #fff;
+	font-size: 16px;
+}
+
+.wrap{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 100vw;
+    height: 100vh;
+}
+
+.widget{
+	width: 40%; /*Para que no abarque todo el ancho*/
+	margin: 2em; /*2em se traduce a 32px*/
+	/*margin: 32px;*/
+}
+.widget p{
+	display: inline-block;
+	line-height: 1em;
+}
+/*Ponemos los valores de la fecha uno al lado del otro*/
+.fecha{
+	font-family: Oswald, Arial;
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 0.32125rem;
+	/*margin-bottom: 5px;*/
+	background: rgba(0,0,0,.5);
+	padding: 20px;
+}
+
+.reloj{
+	font-family: Oswald, Arial;
+	text-align: center;
+	font-size: 4em;
+	background: rgba(0,0,0,.5);
+	padding: 20px;
+}
+.reloj .caja-segundos{
+	/*La caja-segundos tiene por defecto un ancho de 100%*/
+	/*Con este valor hacemos que se pongan uno al lado del otro*/
+	display: inline-block; 
+}
+.reloj .segundos, .reloj .ampm{
+	/*Con estos valores cada uno abarcará su linea (ampm, segundos)*/
+	/*font-size: de 2rem, porque en el reloj ya teniamos de 4em y queremos la mitad*/
+	font-size: 2rem;
+	display: block;
+}

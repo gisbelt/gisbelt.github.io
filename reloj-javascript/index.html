@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reloj Digital 12 Horas - JS</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+</head>
+<body>
+	<!-- wrap: La vamos a utilizar para centrar el reloj horizontalmente -->
+	<div class="wrap">
+		<!-- widget: Conjunto de fecha y hota -->
+		<div class="widget">
+			<!-- fecha: Contiene párrafos en el cual agregamos el contenido dinámicamente con JS -->
+			<div class="fecha">
+				<p id="weekday" class="weekday"></p> <!-- lunes, martes -->
+				<p class="day" id="day"></p> <!-- dia del mes -->
+				<p>de </p>	
+				<p class="month" id="month"></p> <!-- mes -->
+				<p>del </p>
+				<p class="year" id="year"></p> <!-- año -->
+			</div>
+
+			<div class="reloj">
+				<p class="horas" id="horas"></p>
+				<p>:</p>
+				<p class="minutos" id="minutos"></p>
+				<p>:</p>
+				<!-- Conjunto de am, pm y segundos -->
+				<div class="caja-segundos">
+					<p class="ampm" id="ampm"></p>
+					<p class="segundos" id="segundos"></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="js/reloj.js"></script>
+</body>
+</html>
