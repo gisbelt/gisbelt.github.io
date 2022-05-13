@@ -8,7 +8,7 @@
 
 body{
 	/*Los puntos significan que hay la carpeta img está atrás o cuando sales de styles.css*/
-	background: url('../img/fondo3.jpg');
+	background: url('../img/fondo4.png');
 	background-size: cover; /*Abarca el 100% del ancho*/
 	background-attachment: fixed; /*para que el fondo no se mueva*/
 	font-family: 'Open Sans', Sans-serif, Arial;
@@ -31,10 +31,16 @@ a{
 .target{
 	background: #fff;
 	margin: 40px 0px; /*Margen arriba y abajo de 40*/
-	border-radius: 5px;
+	border-radius: 20px;
 	overflow: hidden; /*Todo el contenido que esté afuera de la tarjeta, eliminalo, para poder poner cosas a la derecha o izquierda*/
 	z-index: 1000;
 	width: 100%;
+}
+
+.centrado{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* ----------------------------- */
@@ -42,6 +48,7 @@ a{
 /* ----------------------------- */
 
 .slider-banner {
+	border-radius: 20px;
 	overflow: hidden;
 	z-index: 1000; 
 	position: relative; /*Nos permite decirle a los elementos hijos (a cada imagen) que se pongan a la derecha*/
@@ -120,6 +127,52 @@ a{
 	/*Con jquery lo solucionamos*/
 	position: absolute; 
 }
+/* boton especial */
+.btn-5{
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	/* outline: none; */
+	line-height: 42px;
+	letter-spacing: 2px;
+	padding: 0 16px 0 16px;
+	border: none;
+	background: #585858;
+	display: flex;
+ 	align-items: center;
+  	/* background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%); */
+}
+.btn-5:active{
+	transform: scale(0.95);
+}
+.btn-5:before,
+.btn-5:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background: #585858;
+	border-radius: 0.25rem;
+	box-shadow:
+	 -1px -1px 5px 0px #fff,
+	 7px 7px 20px 0px #0003,
+	 4px 4px 5px 0px #0002;
+	transition:400ms ease all;
+}
+.btn-5:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+}
+.btn-5:hover{
+	transform: scale(1.030);
+}
+/* boton especial */
 
 .slider-info .flecha-info {
 	font-size: 20px;
@@ -148,13 +201,15 @@ a{
 	line-height: 38px;
 	font-weight: 600;
 	margin-bottom: 16px;
+	letter-spacing: 2px;
 }
 .slider-info .informacion .trabajo{
 	text-align: center;
-	color: #55acee;
+	color: #017092;
 	font-size: 18px;
 	line-height: 18px;
 	margin-bottom: 16px;
+	letter-spacing: 2px;
 }
 .slider-info .informacion .pais{
 	text-align: center;
@@ -169,13 +224,13 @@ a{
 }
 
 .slider-info .informacion .texto{
-	color: #55acce;
+	color: #017092;;
 	font-size: 18px;
 	line-height: 24px;
 }
 .slider-info .informacion .subtitulo{
 	color: #444;
-	font-size: 18px;
+	/* font-size: 18px; */
 	line-height: 24px;
 	margin-bottom: 16px;
 }
@@ -188,7 +243,7 @@ a{
 	width: 14px;
 	height: 14px;
 	display: inline-block; /*Para modificar el alto y el ancho*/
-	margin-right: 10 0px;
+	margin: 0 4px;
 	border-radius: 50%;
 	background: #e6e6e6;
 }
@@ -212,19 +267,30 @@ a{
 	border-radius: 50%;
 	margin: 0 10px;
 }
-.social-links a:hover{
-	background:#55acce; /*Facebook*/
+.social-links .linkedin:hover{
+	background:#55acce; /*linkedin*/
+	color: #fff;
 }
 .social-links .whatsapp:hover{
 	background:#6fe79b; /*whatsapp*/
+	color: #fff;
+}
+.social-links .telegram:hover{
+	background-color: #4ba4d1; /*github*/
+	color: #fff;
+}
+.social-links .github:hover{
+	background-color: #050505b3; /*github*/
+	color: #fff;
 }
 .social-links a span{
 	position: relative;
 	top: 15px;
 }
-.social-links .facebook{ background: #0e76a8; text-decoration: none;}
+.social-links .linkedin{ background: #0e76a8; text-decoration: none;}
 .social-links .whatsapp{ background: #25d366}
 .social-links .telegram{ background: #0088CC }
+.social-links .github{ background: #171515  }
 .social-links .instagram{
  	background: #f09433; 
 	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
